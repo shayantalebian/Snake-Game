@@ -9,6 +9,7 @@ A classic remake of the legendary Snake game, one of the most iconic and widely 
 Use the arrow keys to control the snake as it moves across the screen, consuming food to grow longer. Avoid crashing into the walls or yourself—survive as long as possible to achieve the highest score!
 
 **🔥 The goal? Rack up the highest score possible!**
+
 **⚡ Warning: Highly Addictive!**
 
 ## More About this project
