@@ -9,6 +9,12 @@ screen.title("Snake Game 🐍 | Shayan Talebian 👨🏻‍💻")
 screen.tracer(0)
 
 snake = Snake()
+
+screen.listen()
+screen.onkey(key="Up", fun=snake.up)
+screen.onkey(key="Down", fun=snake.down)
+screen.onkey(key="Left", fun=snake.left)
+screen.onkey(key="Right", fun=snake.right)
     
 game_is_on = True
 while game_is_on:
