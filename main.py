@@ -12,9 +12,13 @@ snake = Snake()
 
 screen.listen()
 screen.onkey(key="Up", fun=snake.up)
+screen.onkey(key="w", fun=snake.up)
 screen.onkey(key="Down", fun=snake.down)
+screen.onkey(key="s", fun=snake.down)
 screen.onkey(key="Left", fun=snake.left)
+screen.onkey(key="a", fun=snake.left)
 screen.onkey(key="Right", fun=snake.right)
+screen.onkey(key="d", fun=snake.right)
     
 game_is_on = True
 while game_is_on:
