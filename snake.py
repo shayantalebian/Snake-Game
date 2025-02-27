@@ -11,12 +11,12 @@ class Snake:
         self.segments = []
         self.create_snake()
         self.head = self.segments[0]
+        self.direction = RIGHT
                 
     def create_snake(self):
         for position in STARTING_POSITIONS:
             self.add_segment(position)
             
-        
     def add_segment(self, position):
         new_segment = Turtle_Module.Turtle(shape="square")
         new_segment.color("white")
@@ -36,19 +36,21 @@ class Snake:
         self.head.forward(MOVE_DISTANCE)
         
     def up(self):
-        if self.head.heading() != DOWN:
-            self.head.setheading(90)
+        if self.direction != DOWN:
+            self.head.setheading(UP)
+            self.direction = UP
     
     def down(self):
-        if self.head.heading() != UP:
-            self.head.setheading(270)
+        if self.direction != UP:
+            self.head.setheading(DOWN)
+            self.direction = DOWN
 
-        
     def left(self):
-        if self.head.heading() != RIGHT:  
-            self.head.setheading(180)
+        if self.direction != RIGHT:  
+            self.head.setheading(LEFT)
+            self.direction = LEFT
 
-        
     def right(self):
-        if self.head.heading() != LEFT: 
-            self.head.setheading(0)
+        if self.direction != LEFT: 
+            self.head.setheading(RIGHT)
+            self.direction = RIGHT
