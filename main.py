@@ -1,16 +1,18 @@
 import turtle as Turtle_Module
 from snake import Snake
 from food import Food
+from scoreboard import Scoreboard
 import time as Time
 
 screen = Turtle_Module.Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Snake Game 🐍 | Shayan Talebian 👨🏻‍💻")
-screen.tracer(0)
+screen.tracer(0)    
 
 snake = Snake()
 food = Food()
+scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(key="Up", fun=snake.up)
@@ -31,5 +33,6 @@ while game_is_on:
     
     if snake.head.distance(food) < 15:
         food.refresh()
+        scoreboard.increase_score()
     
 screen.exitonclick()
